@@ -11,7 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @Slf4j
-public class partner {
+public class Partner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,7 +25,7 @@ public class partner {
     @Getter
     @RequiredArgsConstructor
     public enum Status{
-        ENABLE, DISABLE;
+        ENABLE("활성화"), DISABLE("비활성화");
         private final String description;
     }
 
