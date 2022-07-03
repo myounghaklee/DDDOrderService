@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Slf4j
@@ -19,7 +16,7 @@ public class Partner {
     private String partnerName;
     private String businessNo;
     private String email;
-
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     @Getter
