@@ -16,7 +16,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "partners")
 public class Partner extends AbstractEntity {
-
+//commit test
     private final String PrefixPtnEntity = "ptn_";
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
