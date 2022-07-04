@@ -1,4 +1,4 @@
-package com.practice.order.infrastructure;
+package com.practice.order.infrastructure.partner;
 
 import com.practice.order.common.exception.InvalidParamException;
 import com.practice.order.domain.partner.Partner;

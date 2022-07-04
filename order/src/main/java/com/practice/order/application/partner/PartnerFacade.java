@@ -1,6 +1,7 @@
 package com.practice.order.application.partner;
 
 
+import com.practice.order.domain.Notification.NotificationService;
 import com.practice.order.domain.partner.PartnerCommand;
 import com.practice.order.domain.partner.PartnerInfo;
 import com.practice.order.domain.partner.PartnerService;
@@ -15,6 +16,8 @@ public class PartnerFacade {
     private final PartnerService partnerService;
     private final NotificationService notificationService;
     public PartnerInfo registerPartner(PartnerCommand command){
+        //1. partnerservice register
+        //2. email
         var partnerInfo = partnerService.registerPartner(command);
         notificationService.sendEmail(partnerInfo.getEmail(), "title", "description");
         return partnerInfo;
